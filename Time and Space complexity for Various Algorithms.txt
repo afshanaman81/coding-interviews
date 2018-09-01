@@ -1,0 +1,24 @@
+Time and Space complexity for Various Algorithms
+
+
+Order of Complexities
+O(1)  		constant time
+O(logN)  	logrithmic time
+O(N)		Linear time
+O(NLogN)	
+O(N^2)		Exponential Time
+O(2^N)	
+O(N!)		Factiorial Time
+
+See BigO.jpg
+
+Articles:
+http://bigocheatsheet.com/
+https://justin.abrah.ms/computer-science/big-o-notation-explained.html
+
+
+
+
+
+
+
