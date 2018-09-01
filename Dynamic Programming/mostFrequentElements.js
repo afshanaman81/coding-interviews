@@ -1,6 +1,8 @@
 {
 	// K most frequent elements in Array/List
 
+	// Variation: return the single most common element (mostFrequentElement.js)
+
 	function mostFrequentElements(list, k){
 		let elementFrequencies = new Map()
 		let freq = 0
@@ -68,7 +70,7 @@
 				}
 			}			
 		}
-		return results
+		return results 	// TODO: return only the first K elements
 	}
 
 

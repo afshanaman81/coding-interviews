@@ -1,5 +1,33 @@
 {
-function sumInArray_Linear(arr, sum){
+function sumInArray_Linear(arr, sum){		// Works for sorted and unsorted arrays
+	for (let i=0; i< arr.length; i++){
+		for (let j= i+1; j< arr.length; j++){
+			if (arr[i] + arr[j] == sum){
+				return `${sum} is found as the sum of element ${arr[i]} and ${arr[j]} at indices ${i} and ${j}`
+			}
+		}
+	}
+}
+
+// Input 1: Sorted Array
+let arr = [1,2,4,6,7,12, 15, 19,23]
+let sum = 11
+
+console.log(sumInArray_Linear(arr, sum))
+
+
+// Input 2: unsorted Array
+arr = [23,2,19,6,7,12, 15, 4,1]
+sum = 11
+
+console.log(sumInArray_Linear(arr, sum))
+}
+
+
+
+/*********************************************************/
+{
+function sumInArray_Linear(arr, sum){		// Assuming Array is Sorted
 	for (let i=0; i< arr.length; i++){
 		for (let j= i+1; j< arr.length; j++){
 			// break the inner loop if a value greater than the difference is found (because its a sorted array)
@@ -13,18 +41,25 @@ function sumInArray_Linear(arr, sum){
 	}
 }
 
-const arr = [1,2,4,6,7,12, 15, 19,23]
-const sum = 11
+// Input 1: Sorted Array
+let arr = [1,2,4,6,7,12, 15, 19,23]
+let sum = 11
 
 console.log(sumInArray_Linear(arr, sum))
-}
 
+
+arr = [2,2,3,6,9,12, 15, 19,23]
+sum = 10
+
+console.log(sumInArray_Linear(arr, sum))
+
+}
 
 /*********************************************************/
 
 
 {
-function sumInArray_Binary(arr, sum){
+function sumInArray_Binary(arr, sum){		// Assuming Array is Sorted
 	let i, j
 	for (i=0; i< arr.length; i++){
 		let diff = sum - arr[i]
@@ -48,8 +83,6 @@ function binarySearch(arr, value){
 			end = mid -1
 		}else if (value > arr[mid]){
 			start = mid + 1
-		}else {
-			return -1
 		}
 	}
 	return -1
@@ -66,7 +99,7 @@ console.log(sumInArray_Binary(arr, sum))
 
 
 {
-function sumInArray_MovingWindow(arr, sum){
+function sumInArray_MovingWindow(arr, sum){	// Assuming array is sorted
 
 	let start   = 0
 	let end 	= arr.length -1 
