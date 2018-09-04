@@ -1,7 +1,12 @@
 Types of Algorithms
 
-In-place vs Recursive/Divide n Conquer
+In-place vs Divide n Conquer
 
+
+Iterative vs Recursive
+
+
+Recursive vs Divide n Conquer
 
 
 
@@ -9,12 +14,15 @@ Online vs Offline
 
 
 
-
 Stable vs Non-Stable (sorting)
 
 
 
-Comparison Based sorting
+Comparison Based sorting vs Counting based Sorting
+
+
+
+Moving Window
 
 
 
