@@ -22,7 +22,8 @@ Comparison Based sorting vs Counting based Sorting
 
 
 
-Moving Window
+Sliding or Moving Window
+A technique where nested 'for' loop' can be converted to a single 'for' loop and utilizing extra vaiables for storing temporary results and sub-indices, and hence reducing the time complexity
 
 
 
