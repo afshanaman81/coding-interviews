@@ -21,18 +21,13 @@ A problem can be solved using Dynamic Programming if ...
 
 'Recursive' means the problem can be subdivided into smaller problems of the same type
 
-
 'Backtracking' means incrementally building candidates for a solution and abandoning 
 (backtracking) a candidate as soon as it is clear that the candidate cannot be a possible solution
 
 
-
 So the 'Fibonacci' is a recursive problem which can be solved using Dynamic Programming
 
-
 The 'closestPoint' or 'knapSack' are Backtracking problems which can be solved using DP
-
-
 
 The 'mostFrequentElements' is the similar to 'firstRecurringChar'
 we use Hash maps, 
