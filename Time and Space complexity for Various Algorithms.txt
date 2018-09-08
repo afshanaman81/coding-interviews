@@ -6,8 +6,8 @@ O(1)  		constant time
 O(logN)  	logrithmic time
 O(N)		Linear time
 O(NLogN)	
-O(N^2)		Exponential Time
-O(2^N)	
+O(N^2)		 Quadratic Time
+O(2^N)	Exponential Time
 O(N!)		Factiorial Time
 
 See BigO.jpg
