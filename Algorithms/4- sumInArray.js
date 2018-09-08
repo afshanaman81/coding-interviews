@@ -1,7 +1,9 @@
 {
-function sumInArray_Linear(arr, sum){		// Works for sorted and unsorted arrays
+	// Works for sorted and unsorted arrays
+	// time complexity is O(N^2), because both loops must run to completion
+function sumInArray_Linear(arr, sum){		
 	for (let i=0; i< arr.length; i++){
-		for (let j= i+1; j< arr.length; j++){
+		for (let j= 0; j< arr.length; j++){
 			if (arr[i] + arr[j] == sum){
 				return `${sum} is found as the sum of element ${arr[i]} and ${arr[j]} at indices ${i} and ${j}`
 			}
@@ -27,10 +29,13 @@ console.log(sumInArray_Linear(arr, sum))
 
 /*********************************************************/
 {
-function sumInArray_Linear(arr, sum){		// Assuming Array is Sorted
+	// Assuming Array is Sorted
+	// time complexity is O(N^2), but best case complexity can be improved to O(N)
+function sumInArray_Linear(arr, sum){		
 	for (let i=0; i< arr.length; i++){
-		for (let j= i+1; j< arr.length; j++){
-			// break the inner loop if a value greater than the difference is found (because its a sorted array)
+		for (let j= 0; j< arr.length; j++){
+			// break the inner loop if a value greater than the difference is found 
+			//(because its a sorted array)
 			if (arr[j] > (sum - arr[i])){
 				break
 			}
@@ -59,6 +64,7 @@ console.log(sumInArray_Linear(arr, sum))
 
 
 {
+	// time complexity is O(N.logN)
 function sumInArray_Binary(arr, sum){		// Assuming Array is Sorted
 	let i, j
 	for (i=0; i< arr.length; i++){
@@ -104,9 +110,10 @@ function sumInArray_MovingWindow(arr, sum){	// Assuming array is sorted
 	let start   = 0
 	let end 	= arr.length -1 
 
-	let tempSum = arr[start] + arr[end]
+	let tempSum = 0
 
 	while (start < end){	// havent converged
+		tempSum = arr[start] + arr[end]
 		if (tempSum === sum) {
 			break
 		}else if(tempSum > sum){
@@ -114,7 +121,7 @@ function sumInArray_MovingWindow(arr, sum){	// Assuming array is sorted
 		}else if (tempSum < sum){
 			start++
 		}
-		tempSum = arr[start] + arr[end]
+		
 	}
 	if (start === end){
 		return `Sum of ${sum} was not found`

@@ -3,7 +3,7 @@
 	function reverseArray(arr){
 		// edge cases
 		if (!arr )	return -1
-		if (arr.length <= 1)	return arr
+		if (arr.length == 1)	return arr
 
 		let start = 0, end = arr.length -1
 		while (start < end){
