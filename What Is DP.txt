@@ -8,12 +8,13 @@ A problem can be solved using Dynamic Programming if ...
 
 
 2. Memoization can be used. 
-	That is, there are certain computations in the 
-	recursive phase which are done more than once and hence, 
-	we should save/cache them and reuse them when needed
+	That is, there are certain computations in the recursive phase which are done 
+	more than once and hence, we should save/cache them and reuse them when needed
 
-	Similarly, in case of the Backtracking or Optimization, we are building on the existing partial solutions and trying to find if the next candidate is better than the existing ones. So we should cache all 
-	computed values and compare the new ones to the existing ones
+	Similarly, in case of the Backtracking or Optimization, we are building on the 
+	existing partial solutions and trying to find if the next candidate is better 
+	than the existing ones. So we should cache all computed values and compare 
+	the new ones to the existing ones
 
 	
 'Memoization' word is from latin 'memorandum' which means 'to be remembered'
@@ -21,7 +22,8 @@ A problem can be solved using Dynamic Programming if ...
 'Recursive' means the problem can be subdivided into smaller problems of the same type
 
 
-'Backtracking' means incrementally building candidates for a solution and abandoning (backtracking) a candidate as soon as it is clear that the candidate cannot be a possible solution
+'Backtracking' means incrementally building candidates for a solution and abandoning 
+(backtracking) a candidate as soon as it is clear that the candidate cannot be a possible solution
 
 
 
