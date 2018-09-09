@@ -29,10 +29,11 @@
 			result = bagTheBestDeal(n-1, c)			
 		}else {
 			//console.log('\tConsidering both Options')
-			let putTheItem = v[n] + bagTheBestDeal(n-1, c-w[n])
-			let dontPutTheItem = bagTheBestDeal(n-1, c)
+			let putTheItem 		= v[n] + bagTheBestDeal(n-1, c-w[n])
+			let dontPutTheItem 	= 		 bagTheBestDeal(n-1, c)
 			
-			// Include the item in the baggedItems array and return the max of the two values
+			// Include the item in the baggedItems array (if putTheItem is the way to go) and 
+			// return the max of the two values
 			if (putTheItem >= dontPutTheItem){
 				let key = `item ${n}`
 				if (!baggedItems.get(key)){
@@ -90,6 +91,6 @@
 
 	// Input 2:
 	C = 20
-	KSHelper(N,C)
+	//KSHelper(N,C)
 
 }

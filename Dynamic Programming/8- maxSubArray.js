@@ -4,7 +4,11 @@
 
 	// if the array elements are all positive, then its simply the whole array 
 	// if all the elements are negative, then its the largest element
-	// if the elements are mixed, then its below
+	// if the elements are mixed, 
+	// 		then if the elements are sorted, 
+	// 			then its the array starting with the first element >0 till the end of the array
+	// 		if the elements are not sorted,
+	// 		then its below
 	function maxSubArray(arr){
 		//let subArray = new Array()
 		let currStart = 0, currEnd =0, prevStart =0, prevEnd = 0
