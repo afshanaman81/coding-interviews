@@ -1,7 +1,9 @@
 {
 	// Bubble Sort
+	// worst case time O(N^2)
 	// Similar to insertion sort
-	// But the upper part of the array is kept for the sorted portion
+	// But the upper part of the array is kept for the sorted portion 
+	// and the absolute highest value goes to its correct position every iteration
 
 	function sorted(arr){
 		for (let i=0; i< arr.length -1; i++){

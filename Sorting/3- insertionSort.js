@@ -1,11 +1,15 @@
 {
-	// Insertion sort is a O(n squared) time complexity in worst case
+	// Insertion sort is a O(N^2) time complexity in worst case
 	// We do the swapping in place
 	// the lower part of the given array is used as a hold for the 'sorted' subarray
 	// the sorted subarray is increased in size 1 at a time, every pass
+	// the sorted subarray is only 'relatively' sorted. 
 
 	// initially, the size of the sorted subarray is 1, consisting of the first element
 	// because the first element is relatively sorted
+
+	// insertion sort is an ONLINE algo, that is, it can sort while new data arrives
+	// in real time
 	function sorted(arr){
 		for (let i=1; i < arr.length; i++){
 			let j = i 

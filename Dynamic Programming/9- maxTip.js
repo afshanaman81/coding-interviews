@@ -15,7 +15,7 @@
 		// if no order left
 		if (n == 0){ return 0}
 
-		// if A and B cannot take any more orders
+		// if A and B cannot take any more orders (ideally, should not happen)
 		if (x == 0 && y == 0){ result = 0}
 
 		// Recursive cases

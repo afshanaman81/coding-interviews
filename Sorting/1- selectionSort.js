@@ -1,6 +1,6 @@
 {
 	
-	// Selection Sort is also O of n square (both average and worst case)
+	// Selection Sort is also O(N^2) (both average and worst case)
 	// We run the algo in place
 	// the lower part of the array is used to store the sorted sub array (like Insertion sort)
 	// initially, the sorted subarray is empty (unlike insertion sort)
