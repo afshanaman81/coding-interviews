@@ -1,6 +1,16 @@
 {
-	// Works for sorted and unsorted arrays
-	// time complexity is O(N^2), because both loops must run to completion
+	
+	/*
+	Total 4 approaches:
+	sorted arrays: moving window ==> O(N)
+	sorted arrays: binary search ==> O(N * Log N)
+	unsorted arrays: naive 		 ==> O(N^2)
+	unsorted arrays: With Hashmaps ==> O(N)
+
+	*/
+
+// Naive: Works for sorted and unsorted arrays
+// time complexity is O(N^2), because both loops must run to completion
 function sumInArray_Linear(arr, sum){		
 	for (let i=0; i< arr.length; i++){
 		for (let j= 0; j< arr.length; j++){
@@ -29,34 +39,33 @@ console.log(sumInArray_Linear(arr, sum))
 
 /*********************************************************/
 {
-	// Assuming Array is Sorted
-	// time complexity is O(N^2), but best case complexity can be improved to O(N)
-function sumInArray_Linear(arr, sum){		
+// with Hash Map
+// time complexity is O(N)
+function sumInArray_Hash(arr, sum){	
+	let map = new Map()	
 	for (let i=0; i< arr.length; i++){
-		for (let j= 0; j< arr.length; j++){
-			// break the inner loop if a value greater than the difference is found 
-			//(because its a sorted array)
-			if (arr[j] > (sum - arr[i])){
-				break
-			}
-			if (arr[i] + arr[j] == sum){
-				return `${sum} is found as the sum of element ${arr[i]} and ${arr[j]} at indices ${i} and ${j}`
-			}
+		map.set(arr[i], i)
+	}
+	console.log()
+
+	for (let i= 0; i< arr.length; i++){
+		let difference = sum - arr[i]
+		console.log([arr[i],difference])
+		if (map.get(difference)){
+			return `${sum} is found as the sum of element ${arr[i]} and ${difference} at indices ${i} and ${map.get(difference)}`			
 		}
 	}
+	return 'Sum not found'
 }
 
 // Input 1: Sorted Array
 let arr = [1,2,4,6,7,12, 15, 19,23]
 let sum = 11
+console.log(sumInArray_Hash(arr, sum))
 
-console.log(sumInArray_Linear(arr, sum))
-
-
-arr = [2,2,3,6,9,12, 15, 19,23]
+arr = [2,19,3,6,9,12, 15, 4,23]
 sum = 10
-
-console.log(sumInArray_Linear(arr, sum))
+console.log(sumInArray_Hash(arr, sum))
 
 }
 
