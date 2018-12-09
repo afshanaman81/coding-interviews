@@ -1,0 +1,28 @@
+function AnagramPalindrome(word) {
+// Intuition: For a string to be a palindrome, all the unique characters in it must appear even number of times except one character, which may occur even or odd number of times depending on the length of the string. If the string length is odd, then there is exactly one character who's frequency is odd. If the string length is even, then frequencies of all characters are even.
+
+// The code will iterate through the characters once and calculate the freqencies of each and store it in a hashmap. 
+// Time and Space complexity will be O(N)
+    let map = new Map()
+    for (let i = 0; i < word.length; i++){
+        let c = word.charAt(i)
+        if (map.get(c)) {
+            let freq = Number(map.get(c)) + 1
+            map.set(c, freq)
+        } else {
+            map.set(c, 1)
+        }
+    }
+    console.log(map)
+
+    // check if there is at most one character in the map with odd freq
+    let oddCounter = 0
+    for (let [key, value] of map) {
+        let currFreq = value
+        if (currFreq % 2 > 0) {
+            oddCounter++
+        }
+    }
+    //console.log(oddCounter)
+    return (oddCounter > 1 ? false : true)
+}
